@@ -1,3 +1,137 @@
-body{
-  background-color: black;
+/*.grid-sizer,
+.grid-item { width: 25%; }
+
+.img-width{
+  width: 100%;
+}*/
+
+
+/*//////////////////*/
+
+
+/** { box-sizing: border-box; }*/
+
+/* force scrollbar */
+/*html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }*/
+
+/* ---- grid ---- */
+
+/*.grid {
+  background: #DDD;
+}*/
+
+/* clear fix */
+/*.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}*/
+
+/* ---- .grid-item ---- */
+
+/*.grid-sizer,
+.grid-item {
+  width: 25%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}*/
+
+/*/////////////////////////////*/
+
+
+@use postcss-cssnext;
+
+/* helpers/align.css */
+
+.align {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  width: 100%;
+}
+
+/* helpers/grid.css */
+
+.grid {
+/*  margin-left: auto;
+  margin-right: auto;
+  max-width: 100rem;
+  width: 90%;*/
+}
+
+/* layout/base.css */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+}
+
+/* modules/figure.css */
+
+figure {
+  margin: 0;
+}
+
+/* modules/image.css */
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* vendor/masonry.css */
+
+:root {
+  --masonryGutter: 1%;
+}
+
+.masonry {
+  margin: calc(var(--masonryGutter) * -1);
+}
+
+.masonry__item {
+  margin: calc(var(--masonryGutter) / 2);
+  width: calc(100% / 1 - var(--masonryGutter));
+}
+
+
+@media (min-width: 450px) and (max-width: 849px){
+
+  .masonry__item {
+    width: calc(100% / 2 - var(--masonryGutter));
+  }
+
+}
+
+@media (min-width: 850px) {
+
+  .masonry__item {
+    width: calc(100% / 3 - var(--masonryGutter));
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .masonry__item {
+    width: calc(100% / 4 - var(--masonryGutter));
+  }
+
 }
